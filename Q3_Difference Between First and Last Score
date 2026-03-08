@@ -1,0 +1,31 @@
+class StudentPerformance:
+    def __init__(self, scores):
+        self.scores = scores
+
+    def score_difference(self):
+        try:
+            diff = self.scores[-1] - self.scores[0]
+            print(f"Difference between last and first score is: {diff}")
+        except IndexError:
+            print("No scores available to calculate difference")
+
+# Run it
+scores = [55, 65, 75, 85]
+student = StudentPerformance(scores)
+student.score_difference()
+
+# class StudentPerformance:
+#     def __init__(self, scores):
+#         self.scores = scores
+
+#     def score_difference(self):
+#         try:
+#             diff = self.scores[-1] - self.scores[0]
+#             print(f"Difference between last and first score is: {diff}")
+#         except IndexError:
+#             print("No scores available to calculate difference")
+
+# # Run it
+# scores = []
+# student = StudentPerformance(scores)
+# student.score_difference()
